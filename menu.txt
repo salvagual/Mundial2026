@@ -1,0 +1,15 @@
+registrarse|Mundial2026.php?accio=registrarse|
+fase de grupos|Mundial2026.php?accio=fase_grups|
+dieciseisavos de final|Mundial2026.php?accio=setzens|
+octavos de final|Mundial2026.php?accio=vuitens|
+cuartos de final|Mundial2026.php?accio=quarts|
+semifinales|Mundial2026.php?accio=semifinals|
+final|Mundial2026.php?accio=final|
+clasificación|Mundial2026.php?accio=classificacio|
+clasificación liga|Mundial2026.php?accio=classificacio_lliga|
+Porras fase de grupos|Mundial2026.php?accio=porres_grups_lliga|
+Porras eliminatorias|Mundial2026.php?accio=porres_eliminatories_lliga|
+crear una liga|Mundial2026.php?accio=crear_lliga|
+unirse a una liga|Mundial2026.php?accio=unirse_lliga|
+salir de la liga|Mundial2026.php?accio=sortirse_lliga|
+mensaje al administrador|Mundial2026.php?accio=missatge|

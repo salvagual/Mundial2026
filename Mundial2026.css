@@ -1,0 +1,296 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN BASE
+   ========================================================================== */
+:root {
+    --color-principal: #5c5c5c;
+    --color-acento: #14b8d4;
+    --color-texto: #333333;
+    --color-fondo: #ffffff;
+    --fuente-base: 'Myriad Pro', Myriad, Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-base);
+    font-size: 14px; /* Corregido: añadido 'px' */
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+a {   
+    text-decoration: none;
+    color: var(--color-principal);
+    transition: color 0.2s ease;
+}
+
+p {
+    margin: 0;
+}
+
+/* ==========================================================================
+   2. COMPONENTES COMUNES (Botones, Tablas, Formularios)
+   ========================================================================== */
+.inferior {
+    height: 30px;
+    background: var(--color-principal);
+}
+
+.boton {
+    color: #fff;
+    font-size: 14px; /* Corregido: añadido 'px' */
+    padding: 5px 10px; /* Simplificado padding */
+    vertical-align: bottom;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.boton:hover, .cargado {
+    color: #000;
+}
+
+.blau {
+    margin: 10px 0 5px 0;
+    color: var(--color-acento);
+    font-size: 20px; /* Corregido: añadido 'px' */
+}
+
+/* Tablas */
+td {
+    font-size: 10pt;
+    padding: 6px;
+}
+
+th {
+    font-size: 13px; /* Corregido: añadido 'px' */
+    text-align: left;
+    color: white;
+    background-color: var(--color-principal);
+    padding: 8px;
+}
+
+.estiltabla {
+    border: 1px solid #666666; /* Corregido: añadido '#' y simplificado */
+    border-collapse: collapse;
+}  
+
+.estiltitul, .estil00, .estil01, .estil10, .estil11 {
+    color: #333333; /* Corregido: añadido '#' */
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+.estiloenlace {
+    color: #ff4444; /* Corregido: añadido '#' */
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+/* Inputs y Selects */
+select, input[type="text"], input[type="password"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    overflow: hidden;
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Celdas de colores (Termómetro/Porras) */
+.estilocelda0 { background-color: #ffffff; }
+.estilocelda1 { background-color: #ff6633; }
+.estilocelda2 { background-color: #ff9900; }
+.estilocelda3 { background-color: #ffbb00; }
+.estilocelda4 { background-color: #ffff00; }
+.estilocelda5 { background-color: #bbff00; }
+.estilocelda6 { background-color: #88ff00; }
+.estilocelda7 { background-color: #55ff00; }
+.estilocelda8 { background-color: #00ff00; }
+.estilocelda-1 { background-color: #ff2222; }
+
+/* NUEVO: Soporte para el formulario de registrarse.php */
+.form-registro {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.campo {
+    margin-bottom: 15px;
+}
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.campo input {
+    width: 100%;
+}
+.campo small {
+    display: block;
+    color: #666;
+    margin-top: 4px;
+    font-size: 0.85em;
+}
+.error { color: #d9534f; font-weight: bold; }
+.exito { color: #5cb85c; font-weight: bold; }
+
+.contenedor-grupos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 80px; /* Espacio para que el botón no tape contenido */
+}
+.tarjeta-grupo {
+    background: #fdfdfd;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 300px;
+}
+.input-gol {
+    width: 40px;
+    text-align: center;
+}
+
+/* Área del botón guardar */
+.area-guardar {
+    position: fixed; /* Lo mantiene siempre visible abajo */
+    bottom: 0;
+    right: 0;
+    width: 80%; /* Ajustado al ancho del div .centre */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.boton-guardar {
+    background-color: #14b8d4;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-guardar:hover {
+    background-color: #0e8da3;
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA RESPONSIVA (Layout) - MODIFICADO MUNDIAL 2026
+   ========================================================================== */
+.titul {
+    width: 100%;
+}
+
+.separacioh {
+    background: var(--color-principal);
+    height: 2px;
+}
+
+/* Pantallas Grandes (Escritorio) */
+@media screen and (min-width: 800px) {
+    .menu {
+        float: left;
+        width: 16%;
+        margin-left: 10px;
+    }
+    .separacio {
+        float: left;
+        width: 3px;
+        height: 100%;
+        background: #eee;
+    }
+    .centre {
+        float: left;
+        width: 78%;      /* Ajustado ligeramente para dar aire */
+        margin-left: 2%; /* NUEVO: Separa todo el bloque central del menú */
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+    .opcio, .opcio2 {
+        margin-top: 5px;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    a.opcio2 { color: var(--color-acento); }
+    .opcio:hover, .opcio2:hover { font-weight: 300; }
+}
+
+/* Pantallas Medianas (Tablets) */
+@media screen and (min-width: 480px) and (max-width: 799px) {
+    .menu {
+        float: left;
+        width: 20%;
+    }
+    .centre {
+        float: right;
+        width: 75%;      /* Ajustado para evitar desbordamientos */
+        padding: 0 10px;
+    }
+    .opcio, .opcio2 {
+        display: block;
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .opcio2 { color: var(--color-acento); }
+}
+/* Pantallas Pequeñas (Móviles) */
+@media screen and (max-width: 479px) {
+    .foto {
+        display: none;
+    }
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .opcio, .opcio2 {
+        width: 50%;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        font-weight: bold;
+    }
+    .opcio2 {
+        background: var(--color-acento);
+        color: white;
+    }
+}
+
+/* ==========================================================================
+   4. CORRECCIÓN SOLAPAMIENTO DE TEXTOS (MENÚ ABSOLUTO)
+   ========================================================================== */
+@media screen and (min-width: 480px) {
+    .presentacion-header, 
+    .presentacion_texto, 
+    .bienvenida_contenedor,
+    .bienvenida_usuario,
+    .reglas-contenedor, 
+    .reglas_juego {
+        margin-left: 20%; /* Empuja los textos a la derecha dejando libre el espacio del menú absoluto */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+
